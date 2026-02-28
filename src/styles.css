@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Noto Sans SC', 'Hiragino Sans GB', 'PingFang SC', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(180deg, #f3efe8 0%, #f6f2eb 100%);
+  color: #2f2a24;
+}
+
+.brand-title {
+  font-family: 'STSong', 'Songti SC', 'Noto Serif SC', serif;
+  letter-spacing: 0.02em;
+}
+
+.muji-glass {
+  background: rgba(248, 245, 239, 0.72);
+}
+
+.muji-modal {
+  background: #f8f5ef;
+  box-shadow: 0 12px 30px rgba(53, 43, 30, 0.18);
+}
+
+.muji-surface {
+  background: #fbf8f2;
+  border: 1px solid #d9d2c6;
+  border-radius: 10px;
+}
+
+.muji-input,
+.muji-select {
+  background: #fffdf8;
+  border: 1px solid #d2c8b9;
+  border-radius: 8px;
+  color: #2f2a24;
+  height: 36px;
+  line-height: 1.1;
+}
+
+.muji-input:focus,
+.muji-select:focus {
+  outline: 2px solid #cbbba0;
+  outline-offset: 1px;
+}
+
+.muji-check {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #b8ab98;
+  border-radius: 4px;
+  background: #fff;
+  display: inline-grid;
+  place-items: center;
+  position: relative;
+}
+
+.muji-check:checked {
+  background: #e76aa3;
+  border-color: #e76aa3;
+}
+
+.muji-check:checked::after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.muji-btn {
+  border: 1px solid #cfc6b8;
+  color: #3a332c;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+  height: 36px;
+  padding: 0 12px;
+  line-height: 1.1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.muji-btn:hover {
+  transform: translateY(-1px);
+}
+
+.muji-btn-secondary {
+  background: #fffdf8;
+}
+
+.muji-btn-primary {
+  background: #7a6e5f;
+  border-color: #7a6e5f;
+  color: #fff;
+}
+
+.is-copied {
+  animation: copiedPulse 0.52s ease;
+}
+
+@keyframes copiedPulse {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.map-picked {
+  display: inline-block;
+  animation: mappedFlash 0.4s ease;
+  background: #f7e9b2;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+@keyframes mappedFlash {
+  0% { transform: scale(1); opacity: 0.8; }
+  40% { transform: scale(1.06); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
